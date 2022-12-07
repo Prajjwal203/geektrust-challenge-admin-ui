@@ -3,7 +3,7 @@ import { config } from "../App";
 import axios from "axios";
 import SearchBar from "./SearchBar";
 import EditUser from "./EditUser";
-import "./Styling.css";
+import "../App.css";
 import Footer from "./Footer";
 
 const Table = () => {
@@ -141,10 +141,10 @@ const Table = () => {
                   checked={allCheck}
                 />
               </th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Action</th>
+              <th className="h-name">Name</th>
+              <th className="h-email">Email</th>
+              <th className="h-role">Role</th>
+              <th className="h-action">Action</th>
             </tr>
           </thead>
           <tbody className="tsbody">
@@ -156,7 +156,7 @@ const Table = () => {
                     selectedList.includes(user) ? "row-selected" : ""
                   }`}
                 >
-                  <td>
+                  <td className="row-data">
                     <input
                       type="checkbox"
                       id={user.id}
@@ -165,10 +165,10 @@ const Table = () => {
                       checked={selectedList.includes(user)}
                     />
                   </td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.role}</td>
-                  <td className="iconStyling">
+                  <td className="row-data">{user.name}</td>
+                  <td className="row-data">{user.email}</td>
+                  <td className="row-data">{user.role}</td>
+                  <td className="iconStyling row-data">
                     <EditUser
                       currUser={user}
                       allUsers={allUsers}

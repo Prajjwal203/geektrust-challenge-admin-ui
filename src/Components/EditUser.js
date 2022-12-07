@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, ModalBody, ModalHeader, Row, Col } from "reactstrap";
-import "./Styling.css";
+import "../App.css";
 
 export default function EditUser(props) {
   let { currUser, allUsers, setAllUsers, filteredUsers } = props;

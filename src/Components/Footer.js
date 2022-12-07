@@ -1,5 +1,5 @@
 import React from "react";
-import "./Styling.css";
+import "../App.css";
 
 const Footer = (props) => {
   const {
